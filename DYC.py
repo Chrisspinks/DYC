@@ -27,7 +27,7 @@ def kill_ppl():
             if time.time() - t > 1:
                 recruiting = False
 
-        # loop through image of screen, searching for enemies
+        # loop through image of screen top left to bottom right, searching for enemies
         for x in range(coords[0], coords[2]):
             for y in range(coords[1], coords[3]):
                 if x > 910 and screen[y][x] < 10:
@@ -57,7 +57,7 @@ def kill_ppl():
             menu = True
             break
 
-        # loop through image of screen
+        # loop through image of screen bottom right to top left
         for x in range(coords[2], coords[0], -1):
             for y in range(coords[3], coords[1], -1):
                 if x > 910 and screen[y][x] < 10:
